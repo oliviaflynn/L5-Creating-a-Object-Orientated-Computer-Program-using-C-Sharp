@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7ADEE250-D003-4EC3-8982-782C879B645F}</ProjectGuid>
+    <ProjectGuid>{ED9E8972-7776-415A-8957-2904D6488178}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>CarsDatabase</RootNamespace>
-    <AssemblyName>CarsDatabase</AssemblyName>
+    <RootNamespace>MyDrive</RootNamespace>
+    <AssemblyName>MyDrive</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,41 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Database1DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Database1DataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="frmCars.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCars.Designer.cs">
-      <DependentUpon>frmCars.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmSearch.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmSearch.Designer.cs">
-      <DependentUpon>frmSearch.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HireDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HireDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="HireDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HireDataSet1.xsd</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmCars.resx">
-      <DependentUpon>frmCars.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmSearch.resx">
-      <DependentUpon>frmSearch.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -89,41 +62,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Database1DataSet.xsc">
-      <DependentUpon>Database1DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Database1DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Database1DataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Database1DataSet.xss">
-      <DependentUpon>Database1DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="HireDataSet.xsc">
-      <DependentUpon>HireDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="HireDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HireDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HireDataSet.xss">
-      <DependentUpon>HireDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="HireDataSet1.xsc">
-      <DependentUpon>HireDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="HireDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HireDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HireDataSet1.xss">
-      <DependentUpon>HireDataSet1.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -136,11 +75,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Database1.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

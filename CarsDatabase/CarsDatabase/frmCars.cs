@@ -33,7 +33,7 @@ namespace AssignmentPractice
         {
             OleDbConnection connection = new OleDbConnection();
 
-            connection.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Android\\Documents\\Hire.accdb";
+            connection.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Android\\Documents\\OF\\DatabaseFiles\\Hire.accdb";
                         
             try
             {

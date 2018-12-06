@@ -43,5 +43,16 @@ namespace CarsDatabase.Properties {
                 return ((string)(this["HireConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\"C:\\Users\\Android\\Documents\\OF\\Data" +
+            "base Files\\Hire.accdb\"")]
+        public string HireConnectionString1 {
+            get {
+                return ((string)(this["HireConnectionString1"]));
+            }
+        }
     }
 }
