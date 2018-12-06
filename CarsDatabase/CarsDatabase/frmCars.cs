@@ -14,6 +14,9 @@ namespace AssignmentPractice
 {
     public partial class frmCars : Form
     {
+        private List<DataRecord> records;
+        private int displayedRecord = 0;
+
         public frmCars()
         {
             InitializeComponent();
@@ -31,6 +34,7 @@ namespace AssignmentPractice
 
         private void frmCars_Load(object sender, EventArgs e)
         {
+            records = new List<DataRecord>();
             OleDbConnection connection = new OleDbConnection();
 
             connection.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Android\\Documents\\OF\\DatabaseFiles\\Hire.accdb";
@@ -42,22 +46,18 @@ namespace AssignmentPractice
                 OleDbDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-
-                    VRNumberTextBox.Text = reader.GetValue(0).ToString();
-                    makeTextBox.Text = reader.GetValue(1).ToString();
-                    engineSizeTextBox.Text = reader.GetValue(2).ToString();
-                    dateRegisteredTextBox.Text = reader.GetValue(3).ToString();
-                    rentalPerDayTextBox.Text = reader.GetValue(4).ToString();
-
-                    CheckState checkState = CheckState.Unchecked;
-                    if (reader.GetBoolean(5))
+                    DataRecord dataRecord = new DataRecord()
                     {
-                        checkState = CheckState.Checked;
-                    }
+                        VehicleRegNo = reader.GetValue(0).ToString(),
+                        Make = reader.GetValue(1).ToString(),
+                        EngineSize = reader.GetValue(2).ToString(),
+                        DateRegistered = reader.GetValue(3).ToString(),
+                        RentalPerDay = reader.GetValue(4).ToString(),
+                        Available = reader.GetBoolean(5)
+                    };
 
-                    availableCheckBox.CheckState = checkState;
-
-
+                    records.Add(dataRecord);
+                    
 
                         //Debug.WriteLine(reader.GetValue(0));
                         // Insert code to process data.                    
@@ -74,6 +74,30 @@ namespace AssignmentPractice
             {
                 connection.Close();
             }
+
+            DisplayRecord(displayedRecord);
+            UpdatePageNumberBox();
+        }
+
+        private void UpdatePageNumberBox()
+        {
+            pageNumberBox.Text = (displayedRecord+1) + " of " + records.Count;
+        }
+
+        private void DisplayRecord(int index)
+        {
+            VRNumberTextBox.Text = records[index].VehicleRegNo;
+            makeTextBox.Text = records[index].Make;
+            engineSizeTextBox.Text = records[index].EngineSize;
+            dateRegisteredTextBox.Text = records[index].DateRegistered;
+            rentalPerDayTextBox.Text = records[index].RentalPerDay;
+
+            CheckState checkState = CheckState.Unchecked;
+            if (records[index].Available)
+            {
+                checkState = CheckState.Checked;
+            }
+            availableCheckBox.CheckState = checkState;
         }
 
         private void toolTip1_Popup(object sender, PopupEventArgs e)
@@ -98,6 +122,43 @@ namespace AssignmentPractice
         private void VRNumberTextBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void nextButton_Click(object sender, EventArgs e)
+        {
+            if (displayedRecord+1 < records.Count)
+            {
+                DisplayRecord(++displayedRecord);
+                UpdatePageNumberBox();
+            }
+        }
+
+        private void previousButton_Click(object sender, EventArgs e)
+        {
+            if (displayedRecord > 0)
+            {
+                DisplayRecord(--displayedRecord);
+                UpdatePageNumberBox();
+            }
+        }
+
+        private void lastButton_Click(object sender, EventArgs e)
+        {
+            displayedRecord = records.Count - 1;
+            DisplayRecord(displayedRecord);
+            UpdatePageNumberBox();
+        }
+
+        private void firstButton_Click(object sender, EventArgs e)
+        {
+            displayedRecord = 0;
+            DisplayRecord(displayedRecord);
+            UpdatePageNumberBox();
         }
     }
 }

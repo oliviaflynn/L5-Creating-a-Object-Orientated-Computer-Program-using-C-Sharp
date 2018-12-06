@@ -60,6 +60,11 @@
             formToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
+            // formToolTip
+            // 
+            formToolTip.ToolTipTitle = "Hire a car today!";
+            formToolTip.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
+            // 
             // titleLabel
             // 
             this.titleLabel.AutoSize = true;
@@ -115,6 +120,7 @@
             this.exitButton.TabIndex = 18;
             this.exitButton.Text = "E&xit";
             this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // updateButton
             // 
@@ -133,6 +139,7 @@
             this.firstButton.TabIndex = 19;
             this.firstButton.Text = "First";
             this.firstButton.UseVisualStyleBackColor = true;
+            this.firstButton.Click += new System.EventHandler(this.firstButton_Click);
             // 
             // previousButton
             // 
@@ -142,6 +149,7 @@
             this.previousButton.TabIndex = 20;
             this.previousButton.Text = "Previous";
             this.previousButton.UseVisualStyleBackColor = true;
+            this.previousButton.Click += new System.EventHandler(this.previousButton_Click);
             // 
             // nextButton
             // 
@@ -151,6 +159,7 @@
             this.nextButton.TabIndex = 22;
             this.nextButton.Text = "Next";
             this.nextButton.UseVisualStyleBackColor = true;
+            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
             // lastButton
             // 
@@ -160,6 +169,7 @@
             this.lastButton.TabIndex = 23;
             this.lastButton.Text = "Last";
             this.lastButton.UseVisualStyleBackColor = true;
+            this.lastButton.Click += new System.EventHandler(this.lastButton_Click);
             // 
             // VRNumberLabel
             // 
@@ -274,11 +284,6 @@
             this.dateRegisteredTextBox.Size = new System.Drawing.Size(161, 20);
             this.dateRegisteredTextBox.TabIndex = 8;
             // 
-            // formToolTip
-            // 
-            formToolTip.ToolTipTitle = "Hire a car today!";
-            formToolTip.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
-            // 
             // frmCars
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -311,7 +316,7 @@
             this.Controls.Add(this.titleLabel);
             this.Name = "frmCars";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Task A Olivia Flynn 03/12/2018";
+            this.Text = "Task A Olivia Flynn 15/12/2018";
             formToolTip.SetToolTip(this, "\r\n");
             this.Load += new System.EventHandler(this.frmCars_Load);
             this.ResumeLayout(false);
