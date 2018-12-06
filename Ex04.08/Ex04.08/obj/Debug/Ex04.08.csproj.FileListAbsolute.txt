@@ -1,0 +1,7 @@
+C:\Users\Android\Documents\OF\Ex04.08\Ex04.08\bin\Debug\Ex04.08.exe.config
+C:\Users\Android\Documents\OF\Ex04.08\Ex04.08\bin\Debug\Ex04.08.exe
+C:\Users\Android\Documents\OF\Ex04.08\Ex04.08\bin\Debug\Ex04.08.pdb
+C:\Users\Android\Documents\OF\Ex04.08\Ex04.08\obj\Debug\Ex04.08.csproj.CoreCompileInputs.cache
+C:\Users\Android\Documents\OF\Ex04.08\Ex04.08\obj\Debug\Ex04.08.exe
+C:\Users\Android\Documents\OF\Ex04.08\Ex04.08\obj\Debug\Ex04.08.pdb
+C:\Users\Android\Documents\OF\Ex04.08\Ex04.08\obj\Debug\Ex04.08.csprojAssemblyReference.cache

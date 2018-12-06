@@ -1,0 +1,4 @@
+Console.WriteLine("Enter a number between 1 and 1000: ");
+            numberOne = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter a second number between 1 and 1000: ");
+            numberTwo = Convert.ToInt32(Console.ReadLine());

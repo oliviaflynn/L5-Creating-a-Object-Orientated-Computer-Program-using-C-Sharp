@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.106
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex02.10", "Ex02.10\Ex02.10.csproj", "{539D7E4E-B721-4EEA-9539-29DC6C67254B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{539D7E4E-B721-4EEA-9539-29DC6C67254B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{539D7E4E-B721-4EEA-9539-29DC6C67254B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{539D7E4E-B721-4EEA-9539-29DC6C67254B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{539D7E4E-B721-4EEA-9539-29DC6C67254B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AA3B4025-D206-4BDE-B804-AADE57960E80}
+	EndGlobalSection
+EndGlobal

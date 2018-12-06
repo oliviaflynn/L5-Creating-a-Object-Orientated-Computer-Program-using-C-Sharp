@@ -1,0 +1,11 @@
+1. When would you use a while loop?
+It allows code to be executed repeatedly based on a given boolean condition. 
+We use it when the amount of iterations are unknown.
+2. When would you use a do/while loop?
+A do while loop executes a block of code at least once and then repeatedly executes the block or 
+not depending on a given boolean condition at the end of the block.
+3.When would we use a for loop?
+A for loop (or simply loop) is a statement for specifiying iteration, which allows code to be executed repeatedly.
+for loops are typically used when the number of iterations are known.
+4.Can any one of these loops be substututed for anoher?
+A while loop can be written as a do while loop.

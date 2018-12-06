@@ -1,0 +1,10 @@
+C:\Users\Android\Documents\OF\Ex07.02\Ex07.02\bin\Debug\Ex07.02.exe.config
+C:\Users\Android\Documents\OF\Ex07.02\Ex07.02\bin\Debug\Ex07.02.exe
+C:\Users\Android\Documents\OF\Ex07.02\Ex07.02\bin\Debug\Ex07.02.pdb
+C:\Users\Android\Documents\OF\Ex07.02\Ex07.02\obj\Debug\Ex07.02.csprojAssemblyReference.cache
+C:\Users\Android\Documents\OF\Ex07.02\Ex07.02\obj\Debug\Ex07._02.Form1.resources
+C:\Users\Android\Documents\OF\Ex07.02\Ex07.02\obj\Debug\Ex07._02.Properties.Resources.resources
+C:\Users\Android\Documents\OF\Ex07.02\Ex07.02\obj\Debug\Ex07.02.csproj.GenerateResource.cache
+C:\Users\Android\Documents\OF\Ex07.02\Ex07.02\obj\Debug\Ex07.02.csproj.CoreCompileInputs.cache
+C:\Users\Android\Documents\OF\Ex07.02\Ex07.02\obj\Debug\Ex07.02.exe
+C:\Users\Android\Documents\OF\Ex07.02\Ex07.02\obj\Debug\Ex07.02.pdb
