@@ -1,4 +1,4 @@
-﻿namespace AssignmentPractice
+﻿namespace CarsDatabase
 {
     partial class frmCars
     {
@@ -53,10 +53,11 @@
             this.rentalPerDayTextBox = new System.Windows.Forms.TextBox();
             this.availableCheckBox = new System.Windows.Forms.CheckBox();
             this.pageNumberBox = new System.Windows.Forms.TextBox();
-            this.dateRegisteredTextBox = new System.Windows.Forms.TextBox();
             this.VecRegToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.MakeToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.EngineSizeToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.dateRegisteredTextBox = new System.Windows.Forms.DateTimePicker();
+            this.tableAdapterManager1 = new CarsDatabase.HireDataSet2TableAdapters.TableAdapterManager();
             formToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
@@ -227,6 +228,7 @@
             // 
             // VRNumberTextBox
             // 
+            this.VRNumberTextBox.Enabled = false;
             this.VRNumberTextBox.Location = new System.Drawing.Point(293, 162);
             this.VRNumberTextBox.Name = "VRNumberTextBox";
             this.VRNumberTextBox.Size = new System.Drawing.Size(161, 20);
@@ -256,6 +258,7 @@
             this.rentalPerDayTextBox.Name = "rentalPerDayTextBox";
             this.rentalPerDayTextBox.Size = new System.Drawing.Size(161, 20);
             this.rentalPerDayTextBox.TabIndex = 10;
+            this.rentalPerDayTextBox.TextChanged += new System.EventHandler(this.rentalPerDayTextBox_TextChanged);
             // 
             // availableCheckBox
             // 
@@ -278,11 +281,17 @@
             // 
             // dateRegisteredTextBox
             // 
-            this.dateRegisteredTextBox.ImeMode = System.Windows.Forms.ImeMode.Katakana;
             this.dateRegisteredTextBox.Location = new System.Drawing.Point(295, 240);
             this.dateRegisteredTextBox.Name = "dateRegisteredTextBox";
-            this.dateRegisteredTextBox.Size = new System.Drawing.Size(161, 20);
+            this.dateRegisteredTextBox.Size = new System.Drawing.Size(159, 20);
             this.dateRegisteredTextBox.TabIndex = 8;
+            // 
+            // tableAdapterManager1
+            // 
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.Connection = null;
+            this.tableAdapterManager1.tblCarTableAdapter = null;
+            this.tableAdapterManager1.UpdateOrder = CarsDatabase.HireDataSet2TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // frmCars
             // 
@@ -290,8 +299,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pageNumberBox);
             this.Controls.Add(this.dateRegisteredTextBox);
+            this.Controls.Add(this.pageNumberBox);
             this.Controls.Add(this.availableCheckBox);
             this.Controls.Add(this.rentalPerDayTextBox);
             this.Controls.Add(this.engineSizeTextBox);
@@ -316,7 +325,7 @@
             this.Controls.Add(this.titleLabel);
             this.Name = "frmCars";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Task A Olivia Flynn 15/12/2018";
+            this.Text = "Task A Olivia Flynn 14/12/2018";
             formToolTip.SetToolTip(this, "\r\n");
             this.Load += new System.EventHandler(this.frmCars_Load);
             this.ResumeLayout(false);
@@ -348,11 +357,12 @@
         private System.Windows.Forms.TextBox engineSizeTextBox;
         private System.Windows.Forms.TextBox rentalPerDayTextBox;
         private System.Windows.Forms.CheckBox availableCheckBox;
-        private System.Windows.Forms.TextBox dateRegisteredTextBox;
         private System.Windows.Forms.TextBox pageNumberBox;
         private System.Windows.Forms.ToolTip VecRegToolTip;
         private System.Windows.Forms.ToolTip MakeToolTip;
         private System.Windows.Forms.ToolTip EngineSizeToolTip;
+        private System.Windows.Forms.DateTimePicker dateRegisteredTextBox;
+        private CarsDatabase.HireDataSet2TableAdapters.TableAdapterManager tableAdapterManager1;
     }
 }
 

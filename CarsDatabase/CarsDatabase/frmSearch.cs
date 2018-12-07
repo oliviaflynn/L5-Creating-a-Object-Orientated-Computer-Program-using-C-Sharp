@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AssignmentPractice
+namespace CarsDatabase
 {
     public partial class frmSearch : Form
     {
@@ -43,6 +43,11 @@ namespace AssignmentPractice
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }

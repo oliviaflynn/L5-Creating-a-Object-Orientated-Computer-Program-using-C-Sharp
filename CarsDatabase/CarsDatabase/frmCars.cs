@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AssignmentPractice
+namespace CarsDatabase
 {
     public partial class frmCars : Form
     {
@@ -33,6 +33,7 @@ namespace AssignmentPractice
         }
 
         private void frmCars_Load(object sender, EventArgs e)
+            //conection to database using suitable parameters below
         {
             records = new List<DataRecord>();
             OleDbConnection connection = new OleDbConnection();
@@ -59,11 +60,12 @@ namespace AssignmentPractice
                     records.Add(dataRecord);
                     
 
-                        //Debug.WriteLine(reader.GetValue(0));
-                        // Insert code to process data.                    
+                                    
                 }
                 reader.Close();
             }
+
+            // database connection error handling
 
             catch (Exception)
             {
@@ -86,11 +88,12 @@ namespace AssignmentPractice
 
         private void DisplayRecord(int index)
         {
+            //assigning data from the database to the textfields on frmCars.
             VRNumberTextBox.Text = records[index].VehicleRegNo;
             makeTextBox.Text = records[index].Make;
             engineSizeTextBox.Text = records[index].EngineSize;
-            dateRegisteredTextBox.Text = records[index].DateRegistered;
-            rentalPerDayTextBox.Text = records[index].RentalPerDay;
+            dateRegisteredTextBox.Text = records[index].DateRegistered;            
+            rentalPerDayTextBox.Text = records[index].RentalPerDay;  
 
             CheckState checkState = CheckState.Unchecked;
             if (records[index].Available)
@@ -123,6 +126,8 @@ namespace AssignmentPractice
         {
 
         }
+
+        //navigation buttons below
 
         private void exitButton_Click(object sender, EventArgs e)
         {
@@ -159,6 +164,20 @@ namespace AssignmentPractice
             displayedRecord = 0;
             DisplayRecord(displayedRecord);
             UpdatePageNumberBox();
+        }
+
+        private void dateRegisteredTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rentalPerDayTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+              
+     
+
+           
         }
     }
 }

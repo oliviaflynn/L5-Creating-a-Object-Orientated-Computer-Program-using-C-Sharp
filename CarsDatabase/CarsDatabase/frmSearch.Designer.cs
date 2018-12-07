@@ -1,4 +1,4 @@
-﻿namespace AssignmentPractice
+﻿namespace CarsDatabase
 {
     partial class frmSearch
     {
@@ -32,28 +32,28 @@
             this.database1DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.valueLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.DataEntryTextBox = new System.Windows.Forms.TextBox();
             this.fieldLabel = new System.Windows.Forms.Label();
             this.operatorLabel = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.runButton = new System.Windows.Forms.Button();
-            this.closeButton = new System.Windows.Forms.Button();
+            this.cboOperator = new System.Windows.Forms.ComboBox();
+            this.cboField = new System.Windows.Forms.ComboBox();
+            this.btnRun = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.tblCarBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hireDataSet = new CarsDatabase.HireDataSet();
             this.database1DataSet1 = new CarsDatabase.Database1DataSet();
             this.database1DataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblCarTableAdapter = new CarsDatabase.HireDataSetTableAdapters.tblCarTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.hireDataSet2 = new CarsDatabase.HireDataSet2();
-            this.tblCarBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.tblCarTableAdapter1 = new CarsDatabase.HireDataSet2TableAdapters.tblCarTableAdapter();
             this.vechicleRegNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.makeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.engineSizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateRegisteredDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rentalPerDayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.availableDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.tblCarBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.hireDataSet2 = new CarsDatabase.HireDataSet2();
+            this.tblCarTableAdapter1 = new CarsDatabase.HireDataSet2TableAdapters.tblCarTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSetBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarBindingSource)).BeginInit();
@@ -61,105 +61,106 @@
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hireDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hireDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.valueLabel);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.DataEntryTextBox);
             this.groupBox1.Controls.Add(this.fieldLabel);
             this.groupBox1.Controls.Add(this.operatorLabel);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Location = new System.Drawing.Point(27, 24);
+            this.groupBox1.Controls.Add(this.cboOperator);
+            this.groupBox1.Controls.Add(this.cboField);
+            this.groupBox1.Location = new System.Drawing.Point(105, 41);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(391, 111);
+            this.groupBox1.Size = new System.Drawing.Size(315, 71);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // valueLabel
             // 
             this.valueLabel.AutoSize = true;
-            this.valueLabel.Location = new System.Drawing.Point(261, 30);
+            this.valueLabel.Location = new System.Drawing.Point(187, 15);
             this.valueLabel.Name = "valueLabel";
             this.valueLabel.Size = new System.Drawing.Size(34, 13);
-            this.valueLabel.TabIndex = 3;
+            this.valueLabel.TabIndex = 4;
             this.valueLabel.Text = "Value";
             // 
-            // textBox1
+            // DataEntryTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(264, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(116, 20);
-            this.textBox1.TabIndex = 1;
+            this.DataEntryTextBox.Location = new System.Drawing.Point(187, 31);
+            this.DataEntryTextBox.Name = "DataEntryTextBox";
+            this.DataEntryTextBox.Size = new System.Drawing.Size(121, 20);
+            this.DataEntryTextBox.TabIndex = 5;
             // 
             // fieldLabel
             // 
             this.fieldLabel.AutoSize = true;
-            this.fieldLabel.Location = new System.Drawing.Point(6, 30);
+            this.fieldLabel.Location = new System.Drawing.Point(6, 14);
             this.fieldLabel.Name = "fieldLabel";
             this.fieldLabel.Size = new System.Drawing.Size(29, 13);
-            this.fieldLabel.TabIndex = 1;
+            this.fieldLabel.TabIndex = 0;
             this.fieldLabel.Text = "Field";
             // 
             // operatorLabel
             // 
             this.operatorLabel.AutoSize = true;
-            this.operatorLabel.Location = new System.Drawing.Point(134, 30);
+            this.operatorLabel.Location = new System.Drawing.Point(133, 14);
             this.operatorLabel.Name = "operatorLabel";
             this.operatorLabel.Size = new System.Drawing.Size(48, 13);
             this.operatorLabel.TabIndex = 2;
             this.operatorLabel.Text = "Operator";
             // 
-            // comboBox2
+            // cboOperator
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cboOperator.FormattingEnabled = true;
+            this.cboOperator.Items.AddRange(new object[] {
             "=",
             "<",
             ">",
             "<=",
             ">="});
-            this.comboBox2.Location = new System.Drawing.Point(137, 46);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 1;
+            this.cboOperator.Location = new System.Drawing.Point(136, 30);
+            this.cboOperator.Name = "cboOperator";
+            this.cboOperator.Size = new System.Drawing.Size(45, 21);
+            this.cboOperator.TabIndex = 3;
             // 
-            // comboBox1
+            // cboField
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cboField.FormattingEnabled = true;
+            this.cboField.Items.AddRange(new object[] {
             "Make",
             "EngineSize",
             "RentalPerDay",
             "Available"});
-            this.comboBox1.Location = new System.Drawing.Point(6, 46);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 0;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cboField.Location = new System.Drawing.Point(6, 30);
+            this.cboField.Name = "cboField";
+            this.cboField.Size = new System.Drawing.Size(121, 21);
+            this.cboField.TabIndex = 1;
+            this.cboField.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // runButton
+            // btnRun
             // 
-            this.runButton.Location = new System.Drawing.Point(512, 32);
-            this.runButton.Name = "runButton";
-            this.runButton.Size = new System.Drawing.Size(113, 43);
-            this.runButton.TabIndex = 1;
-            this.runButton.Text = "Run";
-            this.runButton.UseVisualStyleBackColor = true;
-            this.runButton.Click += new System.EventHandler(this.runButton_Click);
+            this.btnRun.Location = new System.Drawing.Point(512, 32);
+            this.btnRun.Name = "btnRun";
+            this.btnRun.Size = new System.Drawing.Size(113, 43);
+            this.btnRun.TabIndex = 7;
+            this.btnRun.Text = "Run";
+            this.btnRun.UseVisualStyleBackColor = true;
+            this.btnRun.Click += new System.EventHandler(this.runButton_Click);
             // 
-            // closeButton
+            // btnClose
             // 
-            this.closeButton.Location = new System.Drawing.Point(512, 81);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(113, 43);
-            this.closeButton.TabIndex = 2;
-            this.closeButton.Text = "Close";
-            this.closeButton.UseVisualStyleBackColor = true;
-            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            this.btnClose.Location = new System.Drawing.Point(512, 81);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(113, 43);
+            this.btnClose.TabIndex = 8;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // tblCarBindingSource
             // 
@@ -200,21 +201,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 141);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(662, 253);
-            this.dataGridView1.TabIndex = 3;
-            // 
-            // hireDataSet2
-            // 
-            this.hireDataSet2.DataSetName = "HireDataSet2";
-            this.hireDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblCarBindingSource1
-            // 
-            this.tblCarBindingSource1.DataMember = "tblCar";
-            this.tblCarBindingSource1.DataSource = this.hireDataSet2;
-            // 
-            // tblCarTableAdapter1
-            // 
-            this.tblCarTableAdapter1.ClearBeforeFill = true;
+            this.dataGridView1.TabIndex = 6;
             // 
             // vechicleRegNoDataGridViewTextBoxColumn
             // 
@@ -252,18 +239,32 @@
             this.availableDataGridViewCheckBoxColumn.HeaderText = "Available";
             this.availableDataGridViewCheckBoxColumn.Name = "availableDataGridViewCheckBoxColumn";
             // 
+            // tblCarBindingSource1
+            // 
+            this.tblCarBindingSource1.DataMember = "tblCar";
+            this.tblCarBindingSource1.DataSource = this.hireDataSet2;
+            // 
+            // hireDataSet2
+            // 
+            this.hireDataSet2.DataSetName = "HireDataSet2";
+            this.hireDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblCarTableAdapter1
+            // 
+            this.tblCarTableAdapter1.ClearBeforeFill = true;
+            // 
             // frmSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(686, 406);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.closeButton);
-            this.Controls.Add(this.runButton);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnRun);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmSearch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Task A Search Olivia Flynn 15/12/2018";
+            this.Text = "Task A Search Olivia Flynn 14/12/2018";
             this.Load += new System.EventHandler(this.frmSearch_Load);
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSetBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -273,8 +274,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hireDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hireDataSet2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -283,13 +284,13 @@
         private System.Windows.Forms.BindingSource database1DataSetBindingSource;
         
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox DataEntryTextBox;
         private System.Windows.Forms.Label fieldLabel;
         private System.Windows.Forms.Label operatorLabel;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button runButton;
-        private System.Windows.Forms.Button closeButton;
+        private System.Windows.Forms.ComboBox cboOperator;
+        private System.Windows.Forms.ComboBox cboField;
+        private System.Windows.Forms.Button btnRun;
+        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label valueLabel;
         private CarsDatabase.Database1DataSet database1DataSet1;
         private System.Windows.Forms.BindingSource database1DataSet1BindingSource;
