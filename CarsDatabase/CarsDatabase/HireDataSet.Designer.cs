@@ -279,7 +279,7 @@ namespace CarsDatabase {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class tblCarDataTable : global::System.Data.TypedTableBase<tblCarRow> {
             
-            private global::System.Data.DataColumn columnVechicleRegNo;
+            private global::System.Data.DataColumn columnVehicleRegNo;
             
             private global::System.Data.DataColumn columnMake;
             
@@ -326,9 +326,9 @@ namespace CarsDatabase {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn VechicleRegNoColumn {
+            public global::System.Data.DataColumn VehicleRegNoColumn {
                 get {
-                    return this.columnVechicleRegNo;
+                    return this.columnVehicleRegNo;
                 }
             }
             
@@ -409,10 +409,10 @@ namespace CarsDatabase {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblCarRow AddtblCarRow(string VechicleRegNo, string Make, string EngineSize, System.DateTime DateRegistered, decimal RentalPerDay, bool Available) {
+            public tblCarRow AddtblCarRow(string VehicleRegNo, string Make, string EngineSize, System.DateTime DateRegistered, decimal RentalPerDay, bool Available) {
                 tblCarRow rowtblCarRow = ((tblCarRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        VechicleRegNo,
+                        VehicleRegNo,
                         Make,
                         EngineSize,
                         DateRegistered,
@@ -425,9 +425,9 @@ namespace CarsDatabase {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblCarRow FindByVechicleRegNo(string VechicleRegNo) {
+            public tblCarRow FindByVehicleRegNo(string VehicleRegNo) {
                 return ((tblCarRow)(this.Rows.Find(new object[] {
-                            VechicleRegNo})));
+                            VehicleRegNo})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -447,7 +447,7 @@ namespace CarsDatabase {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnVechicleRegNo = base.Columns["VechicleRegNo"];
+                this.columnVehicleRegNo = base.Columns["VehicleRegNo"];
                 this.columnMake = base.Columns["Make"];
                 this.columnEngineSize = base.Columns["EngineSize"];
                 this.columnDateRegistered = base.Columns["DateRegistered"];
@@ -458,8 +458,8 @@ namespace CarsDatabase {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnVechicleRegNo = new global::System.Data.DataColumn("VechicleRegNo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnVechicleRegNo);
+                this.columnVehicleRegNo = new global::System.Data.DataColumn("VehicleRegNo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVehicleRegNo);
                 this.columnMake = new global::System.Data.DataColumn("Make", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMake);
                 this.columnEngineSize = new global::System.Data.DataColumn("EngineSize", typeof(string), null, global::System.Data.MappingType.Element);
@@ -471,10 +471,10 @@ namespace CarsDatabase {
                 this.columnAvailable = new global::System.Data.DataColumn("Available", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAvailable);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnVechicleRegNo}, true));
-                this.columnVechicleRegNo.AllowDBNull = false;
-                this.columnVechicleRegNo.Unique = true;
-                this.columnVechicleRegNo.MaxLength = 255;
+                                this.columnVehicleRegNo}, true));
+                this.columnVehicleRegNo.AllowDBNull = false;
+                this.columnVehicleRegNo.Unique = true;
+                this.columnVehicleRegNo.MaxLength = 255;
                 this.columnMake.MaxLength = 255;
                 this.columnEngineSize.MaxLength = 255;
             }
@@ -619,12 +619,12 @@ namespace CarsDatabase {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string VechicleRegNo {
+            public string VehicleRegNo {
                 get {
-                    return ((string)(this[this.tabletblCar.VechicleRegNoColumn]));
+                    return ((string)(this[this.tabletblCar.VehicleRegNoColumn]));
                 }
                 set {
-                    this[this.tabletblCar.VechicleRegNoColumn] = value;
+                    this[this.tabletblCar.VehicleRegNoColumn] = value;
                 }
             }
             
@@ -928,7 +928,7 @@ namespace CarsDatabase.HireDataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "tblCar";
-            tableMapping.ColumnMappings.Add("VechicleRegNo", "VechicleRegNo");
+            tableMapping.ColumnMappings.Add("VehicleRegNo", "VehicleRegNo");
             tableMapping.ColumnMappings.Add("Make", "Make");
             tableMapping.ColumnMappings.Add("EngineSize", "EngineSize");
             tableMapping.ColumnMappings.Add("DateRegistered", "DateRegistered");
@@ -937,9 +937,9 @@ namespace CarsDatabase.HireDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `tblCar` WHERE ((`VechicleRegNo` = ?) AND ((? = 1 AND `Make` IS NULL) OR (`Make` = ?)) AND ((? = 1 AND `EngineSize` IS NULL) OR (`EngineSize` = ?)) AND ((? = 1 AND `DateRegistered` IS NULL) OR (`DateRegistered` = ?)) AND ((? = 1 AND `RentalPerDay` IS NULL) OR (`RentalPerDay` = ?)) AND ((? = 1 AND `Available` IS NULL) OR (`Available` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `tblCar` WHERE ((`VehicleRegNo` = ?) AND ((? = 1 AND `Make` IS NULL) OR (`Make` = ?)) AND ((? = 1 AND `EngineSize` IS NULL) OR (`EngineSize` = ?)) AND ((? = 1 AND `DateRegistered` IS NULL) OR (`DateRegistered` = ?)) AND ((? = 1 AND `RentalPerDay` IS NULL) OR (`RentalPerDay` = ?)) AND ((? = 1 AND `Available` IS NULL) OR (`Available` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_VechicleRegNo", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "VechicleRegNo", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_VehicleRegNo", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "VehicleRegNo", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Make", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Make", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Make", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Make", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_EngineSize", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "EngineSize", global::System.Data.DataRowVersion.Original, true, null));
@@ -952,10 +952,10 @@ namespace CarsDatabase.HireDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Available", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Available", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `tblCar` (`VechicleRegNo`, `Make`, `EngineSize`, `DateRegistered`, `R" +
-                "entalPerDay`, `Available`) VALUES (?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `tblCar` (`VehicleRegNo`, `Make`, `EngineSize`, `DateRegistered`, `Re" +
+                "ntalPerDay`, `Available`) VALUES (?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("VechicleRegNo", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "VechicleRegNo", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("VehicleRegNo", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "VehicleRegNo", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Make", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Make", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("EngineSize", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "EngineSize", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DateRegistered", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateRegistered", global::System.Data.DataRowVersion.Current, false, null));
@@ -963,15 +963,15 @@ namespace CarsDatabase.HireDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Available", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Available", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `tblCar` SET `VechicleRegNo` = ?, `Make` = ?, `EngineSize` = ?, `DateRegistered` = ?, `RentalPerDay` = ?, `Available` = ? WHERE ((`VechicleRegNo` = ?) AND ((? = 1 AND `Make` IS NULL) OR (`Make` = ?)) AND ((? = 1 AND `EngineSize` IS NULL) OR (`EngineSize` = ?)) AND ((? = 1 AND `DateRegistered` IS NULL) OR (`DateRegistered` = ?)) AND ((? = 1 AND `RentalPerDay` IS NULL) OR (`RentalPerDay` = ?)) AND ((? = 1 AND `Available` IS NULL) OR (`Available` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `tblCar` SET `VehicleRegNo` = ?, `Make` = ?, `EngineSize` = ?, `DateRegistered` = ?, `RentalPerDay` = ?, `Available` = ? WHERE ((`VehicleRegNo` = ?) AND ((? = 1 AND `Make` IS NULL) OR (`Make` = ?)) AND ((? = 1 AND `EngineSize` IS NULL) OR (`EngineSize` = ?)) AND ((? = 1 AND `DateRegistered` IS NULL) OR (`DateRegistered` = ?)) AND ((? = 1 AND `RentalPerDay` IS NULL) OR (`RentalPerDay` = ?)) AND ((? = 1 AND `Available` IS NULL) OR (`Available` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("VechicleRegNo", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "VechicleRegNo", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("VehicleRegNo", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "VehicleRegNo", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Make", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Make", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("EngineSize", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "EngineSize", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DateRegistered", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateRegistered", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RentalPerDay", global::System.Data.OleDb.OleDbType.Currency, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RentalPerDay", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Available", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Available", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_VechicleRegNo", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "VechicleRegNo", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_VehicleRegNo", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "VehicleRegNo", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Make", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Make", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Make", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Make", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_EngineSize", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "EngineSize", global::System.Data.DataRowVersion.Original, true, null));
@@ -988,7 +988,7 @@ namespace CarsDatabase.HireDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::CarsDatabase.Properties.Settings.Default.HireConnectionString;
+            this._connection.ConnectionString = global::CarsDatabase.Properties.Settings.Default.HireConnectionString3;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -997,8 +997,8 @@ namespace CarsDatabase.HireDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT VechicleRegNo, Make, EngineSize, DateRegistered, RentalPerDay, Available F" +
-                "ROM tblCar";
+            this._commandCollection[0].CommandText = "SELECT VehicleRegNo, Make, EngineSize, DateRegistered, RentalPerDay, Available FR" +
+                "OM tblCar";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1059,12 +1059,12 @@ namespace CarsDatabase.HireDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_VechicleRegNo, string Original_Make, string Original_EngineSize, global::System.Nullable<global::System.DateTime> Original_DateRegistered, global::System.Nullable<decimal> Original_RentalPerDay, bool Original_Available) {
-            if ((Original_VechicleRegNo == null)) {
-                throw new global::System.ArgumentNullException("Original_VechicleRegNo");
+        public virtual int Delete(string Original_VehicleRegNo, string Original_Make, string Original_EngineSize, global::System.Nullable<global::System.DateTime> Original_DateRegistered, global::System.Nullable<decimal> Original_RentalPerDay, bool Original_Available) {
+            if ((Original_VehicleRegNo == null)) {
+                throw new global::System.ArgumentNullException("Original_VehicleRegNo");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_VechicleRegNo));
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_VehicleRegNo));
             }
             if ((Original_Make == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -1120,12 +1120,12 @@ namespace CarsDatabase.HireDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string VechicleRegNo, string Make, string EngineSize, global::System.Nullable<global::System.DateTime> DateRegistered, global::System.Nullable<decimal> RentalPerDay, bool Available) {
-            if ((VechicleRegNo == null)) {
-                throw new global::System.ArgumentNullException("VechicleRegNo");
+        public virtual int Insert(string VehicleRegNo, string Make, string EngineSize, global::System.Nullable<global::System.DateTime> DateRegistered, global::System.Nullable<decimal> RentalPerDay, bool Available) {
+            if ((VehicleRegNo == null)) {
+                throw new global::System.ArgumentNullException("VehicleRegNo");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(VechicleRegNo));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(VehicleRegNo));
             }
             if ((Make == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -1172,12 +1172,12 @@ namespace CarsDatabase.HireDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string VechicleRegNo, string Make, string EngineSize, global::System.Nullable<global::System.DateTime> DateRegistered, global::System.Nullable<decimal> RentalPerDay, bool Available, string Original_VechicleRegNo, string Original_Make, string Original_EngineSize, global::System.Nullable<global::System.DateTime> Original_DateRegistered, global::System.Nullable<decimal> Original_RentalPerDay, bool Original_Available) {
-            if ((VechicleRegNo == null)) {
-                throw new global::System.ArgumentNullException("VechicleRegNo");
+        public virtual int Update(string VehicleRegNo, string Make, string EngineSize, global::System.Nullable<global::System.DateTime> DateRegistered, global::System.Nullable<decimal> RentalPerDay, bool Available, string Original_VehicleRegNo, string Original_Make, string Original_EngineSize, global::System.Nullable<global::System.DateTime> Original_DateRegistered, global::System.Nullable<decimal> Original_RentalPerDay, bool Original_Available) {
+            if ((VehicleRegNo == null)) {
+                throw new global::System.ArgumentNullException("VehicleRegNo");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(VechicleRegNo));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(VehicleRegNo));
             }
             if ((Make == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -1204,11 +1204,11 @@ namespace CarsDatabase.HireDataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             this.Adapter.UpdateCommand.Parameters[5].Value = ((bool)(Available));
-            if ((Original_VechicleRegNo == null)) {
-                throw new global::System.ArgumentNullException("Original_VechicleRegNo");
+            if ((Original_VehicleRegNo == null)) {
+                throw new global::System.ArgumentNullException("Original_VehicleRegNo");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_VechicleRegNo));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_VehicleRegNo));
             }
             if ((Original_Make == null)) {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
@@ -1264,8 +1264,8 @@ namespace CarsDatabase.HireDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Make, string EngineSize, global::System.Nullable<global::System.DateTime> DateRegistered, global::System.Nullable<decimal> RentalPerDay, bool Available, string Original_VechicleRegNo, string Original_Make, string Original_EngineSize, global::System.Nullable<global::System.DateTime> Original_DateRegistered, global::System.Nullable<decimal> Original_RentalPerDay, bool Original_Available) {
-            return this.Update(Original_VechicleRegNo, Make, EngineSize, DateRegistered, RentalPerDay, Available, Original_VechicleRegNo, Original_Make, Original_EngineSize, Original_DateRegistered, Original_RentalPerDay, Original_Available);
+        public virtual int Update(string Make, string EngineSize, global::System.Nullable<global::System.DateTime> DateRegistered, global::System.Nullable<decimal> RentalPerDay, bool Available, string Original_VehicleRegNo, string Original_Make, string Original_EngineSize, global::System.Nullable<global::System.DateTime> Original_DateRegistered, global::System.Nullable<decimal> Original_RentalPerDay, bool Original_Available) {
+            return this.Update(Original_VehicleRegNo, Make, EngineSize, DateRegistered, RentalPerDay, Available, Original_VehicleRegNo, Original_Make, Original_EngineSize, Original_DateRegistered, Original_RentalPerDay, Original_Available);
         }
     }
     

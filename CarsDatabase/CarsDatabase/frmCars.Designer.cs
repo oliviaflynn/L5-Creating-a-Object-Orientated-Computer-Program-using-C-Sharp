@@ -57,7 +57,7 @@
             this.MakeToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.EngineSizeToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.dateRegisteredTextBox = new System.Windows.Forms.DateTimePicker();
-            this.tableAdapterManager1 = new CarsDatabase.HireDataSet2TableAdapters.TableAdapterManager();
+            this.tableAdapterManager1 = new CarsDatabase.HireDataSetTableAdapters.TableAdapterManager();
             formToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
@@ -84,6 +84,7 @@
             this.addButton.TabIndex = 14;
             this.addButton.Text = "&Add";
             this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // deleteButton
             // 
@@ -93,6 +94,7 @@
             this.deleteButton.TabIndex = 15;
             this.deleteButton.Text = "&Delete";
             this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // searchButton
             // 
@@ -112,6 +114,7 @@
             this.cancelButton.TabIndex = 17;
             this.cancelButton.Text = "&Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // exitButton
             // 
@@ -131,6 +134,7 @@
             this.updateButton.TabIndex = 13;
             this.updateButton.Text = "&Update";
             this.updateButton.UseVisualStyleBackColor = true;
+            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
             // 
             // firstButton
             // 
@@ -230,6 +234,7 @@
             // 
             this.VRNumberTextBox.Enabled = false;
             this.VRNumberTextBox.Location = new System.Drawing.Point(293, 162);
+            this.VRNumberTextBox.MaxLength = 10;
             this.VRNumberTextBox.Name = "VRNumberTextBox";
             this.VRNumberTextBox.Size = new System.Drawing.Size(161, 20);
             this.VRNumberTextBox.TabIndex = 2;
@@ -239,6 +244,7 @@
             // makeTextBox
             // 
             this.makeTextBox.Location = new System.Drawing.Point(293, 188);
+            this.makeTextBox.MaxLength = 50;
             this.makeTextBox.Name = "makeTextBox";
             this.makeTextBox.Size = new System.Drawing.Size(161, 20);
             this.makeTextBox.TabIndex = 4;
@@ -247,6 +253,7 @@
             // engineSizeTextBox
             // 
             this.engineSizeTextBox.Location = new System.Drawing.Point(293, 214);
+            this.engineSizeTextBox.MaxLength = 10;
             this.engineSizeTextBox.Name = "engineSizeTextBox";
             this.engineSizeTextBox.Size = new System.Drawing.Size(161, 20);
             this.engineSizeTextBox.TabIndex = 6;
@@ -291,7 +298,7 @@
             this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager1.Connection = null;
             this.tableAdapterManager1.tblCarTableAdapter = null;
-            this.tableAdapterManager1.UpdateOrder = CarsDatabase.HireDataSet2TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager1.UpdateOrder = CarsDatabase.HireDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // frmCars
             // 
@@ -362,7 +369,7 @@
         private System.Windows.Forms.ToolTip MakeToolTip;
         private System.Windows.Forms.ToolTip EngineSizeToolTip;
         private System.Windows.Forms.DateTimePicker dateRegisteredTextBox;
-        private CarsDatabase.HireDataSet2TableAdapters.TableAdapterManager tableAdapterManager1;
+        private CarsDatabase.HireDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
     }
 }
 

@@ -19,8 +19,10 @@ namespace CarsDatabase
 
         private void frmSearch_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'hireDataSet1.tblCar' table. You can move, or remove it, as needed.
+            this.tblCarTableAdapter1.Fill(this.hireDataSet1.tblCar);
             // TODO: This line of code loads data into the 'hireDataSet2.tblCar' table. You can move, or remove it, as needed.
-            this.tblCarTableAdapter1.Fill(this.hireDataSet2.tblCar);
+            this.tblCarTableAdapter.Fill(this.hireDataSet.tblCar);
 
 
         }
