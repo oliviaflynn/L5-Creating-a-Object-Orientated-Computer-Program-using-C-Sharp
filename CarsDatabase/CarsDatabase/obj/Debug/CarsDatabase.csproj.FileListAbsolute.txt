@@ -22,3 +22,11 @@ C:\Users\Android\Source\Repos\L5 Creating a Object Orientated Computer Program u
 C:\Users\Android\Documents\OF\CarsDatabase\CarsDatabase\obj\Debug\CarsDatabase.frmCars.resources
 C:\Users\Android\Documents\OF\CarsDatabase\CarsDatabase\obj\Debug\CarsDatabase.frmSearch.resources
 C:\Users\Android\Documents\OF\CarsDatabase\CarsDatabase\bin\Debug\Hire.accdb
+C:\Users\Android\Documents\OF\CarsDatabase\CarsDatabase\bin\Debug\HireDataSet.Designer.cs
+C:\Users\Android\Documents\OF\CarsDatabase\CarsDatabase\bin\Debug\HireDataSet.xsc
+C:\Users\Android\Documents\OF\CarsDatabase\CarsDatabase\bin\Debug\HireDataSet.xsd
+C:\Users\Android\Documents\OF\CarsDatabase\CarsDatabase\bin\Debug\HireDataSet.xss
+C:\Users\Android\Documents\OF\CarsDatabase\CarsDatabase\bin\Debug\HireDataSet1.Designer.cs
+C:\Users\Android\Documents\OF\CarsDatabase\CarsDatabase\bin\Debug\HireDataSet1.xsc
+C:\Users\Android\Documents\OF\CarsDatabase\CarsDatabase\bin\Debug\HireDataSet1.xsd
+C:\Users\Android\Documents\OF\CarsDatabase\CarsDatabase\bin\Debug\HireDataSet1.xss

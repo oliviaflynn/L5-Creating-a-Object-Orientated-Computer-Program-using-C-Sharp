@@ -58,6 +58,9 @@
             this.EngineSizeToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.dateRegisteredTextBox = new System.Windows.Forms.DateTimePicker();
             this.tableAdapterManager1 = new CarsDatabase.HireDataSetTableAdapters.TableAdapterManager();
+            this.DateToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.RentalPerDayToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.availableToolTip = new System.Windows.Forms.ToolTip(this.components);
             formToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
@@ -69,16 +72,18 @@
             // titleLabel
             // 
             this.titleLabel.AutoSize = true;
+            this.titleLabel.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.titleLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.titleLabel.Font = new System.Drawing.Font("Agency FB", 50F, System.Drawing.FontStyle.Bold);
-            this.titleLabel.Location = new System.Drawing.Point(106, 33);
+            this.titleLabel.Location = new System.Drawing.Point(145, 50);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(435, 80);
+            this.titleLabel.Size = new System.Drawing.Size(437, 82);
             this.titleLabel.TabIndex = 0;
             this.titleLabel.Text = "Bowman Car Hire";
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(663, 99);
+            this.addButton.Location = new System.Drawing.Point(663, 89);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(125, 60);
             this.addButton.TabIndex = 14;
@@ -88,7 +93,7 @@
             // 
             // deleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(663, 165);
+            this.deleteButton.Location = new System.Drawing.Point(663, 155);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(125, 60);
             this.deleteButton.TabIndex = 15;
@@ -98,7 +103,7 @@
             // 
             // searchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(663, 231);
+            this.searchButton.Location = new System.Drawing.Point(663, 221);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(125, 60);
             this.searchButton.TabIndex = 16;
@@ -108,7 +113,7 @@
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(663, 297);
+            this.cancelButton.Location = new System.Drawing.Point(663, 287);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(125, 60);
             this.cancelButton.TabIndex = 17;
@@ -118,7 +123,7 @@
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(663, 363);
+            this.exitButton.Location = new System.Drawing.Point(663, 353);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(125, 60);
             this.exitButton.TabIndex = 18;
@@ -128,7 +133,7 @@
             // 
             // updateButton
             // 
-            this.updateButton.Location = new System.Drawing.Point(663, 33);
+            this.updateButton.Location = new System.Drawing.Point(663, 23);
             this.updateButton.Name = "updateButton";
             this.updateButton.Size = new System.Drawing.Size(125, 60);
             this.updateButton.TabIndex = 13;
@@ -179,16 +184,16 @@
             // VRNumberLabel
             // 
             this.VRNumberLabel.AutoSize = true;
-            this.VRNumberLabel.Location = new System.Drawing.Point(137, 169);
+            this.VRNumberLabel.Location = new System.Drawing.Point(137, 165);
             this.VRNumberLabel.Name = "VRNumberLabel";
-            this.VRNumberLabel.Size = new System.Drawing.Size(150, 13);
+            this.VRNumberLabel.Size = new System.Drawing.Size(181, 13);
             this.VRNumberLabel.TabIndex = 1;
             this.VRNumberLabel.Text = "Vechicle Registration Number:";
             // 
             // makeLabel
             // 
             this.makeLabel.AutoSize = true;
-            this.makeLabel.Location = new System.Drawing.Point(252, 195);
+            this.makeLabel.Location = new System.Drawing.Point(281, 195);
             this.makeLabel.Name = "makeLabel";
             this.makeLabel.Size = new System.Drawing.Size(37, 13);
             this.makeLabel.TabIndex = 3;
@@ -197,43 +202,43 @@
             // engineSizeLabel
             // 
             this.engineSizeLabel.AutoSize = true;
-            this.engineSizeLabel.Location = new System.Drawing.Point(221, 221);
+            this.engineSizeLabel.Location = new System.Drawing.Point(239, 221);
             this.engineSizeLabel.Name = "engineSizeLabel";
-            this.engineSizeLabel.Size = new System.Drawing.Size(66, 13);
+            this.engineSizeLabel.Size = new System.Drawing.Size(79, 13);
             this.engineSizeLabel.TabIndex = 5;
             this.engineSizeLabel.Text = "Engine Size:";
             // 
             // dateRegisteredLabel
             // 
             this.dateRegisteredLabel.AutoSize = true;
-            this.dateRegisteredLabel.Location = new System.Drawing.Point(202, 246);
+            this.dateRegisteredLabel.Location = new System.Drawing.Point(215, 247);
             this.dateRegisteredLabel.Name = "dateRegisteredLabel";
-            this.dateRegisteredLabel.Size = new System.Drawing.Size(87, 13);
+            this.dateRegisteredLabel.Size = new System.Drawing.Size(103, 13);
             this.dateRegisteredLabel.TabIndex = 7;
             this.dateRegisteredLabel.Text = "Date Registered:";
             // 
             // rentalPerDayLabel
             // 
             this.rentalPerDayLabel.AutoSize = true;
-            this.rentalPerDayLabel.Location = new System.Drawing.Point(205, 269);
+            this.rentalPerDayLabel.Location = new System.Drawing.Point(221, 273);
             this.rentalPerDayLabel.Name = "rentalPerDayLabel";
-            this.rentalPerDayLabel.Size = new System.Drawing.Size(82, 13);
+            this.rentalPerDayLabel.Size = new System.Drawing.Size(97, 13);
             this.rentalPerDayLabel.TabIndex = 9;
             this.rentalPerDayLabel.Text = "Rental Per Day:";
             // 
             // availableLabel
             // 
             this.availableLabel.AutoSize = true;
-            this.availableLabel.Location = new System.Drawing.Point(234, 300);
+            this.availableLabel.Location = new System.Drawing.Point(251, 297);
             this.availableLabel.Name = "availableLabel";
-            this.availableLabel.Size = new System.Drawing.Size(53, 13);
+            this.availableLabel.Size = new System.Drawing.Size(67, 13);
             this.availableLabel.TabIndex = 11;
             this.availableLabel.Text = "Available:";
             // 
             // VRNumberTextBox
             // 
             this.VRNumberTextBox.Enabled = false;
-            this.VRNumberTextBox.Location = new System.Drawing.Point(293, 162);
+            this.VRNumberTextBox.Location = new System.Drawing.Point(324, 162);
             this.VRNumberTextBox.MaxLength = 10;
             this.VRNumberTextBox.Name = "VRNumberTextBox";
             this.VRNumberTextBox.Size = new System.Drawing.Size(161, 20);
@@ -243,7 +248,7 @@
             // 
             // makeTextBox
             // 
-            this.makeTextBox.Location = new System.Drawing.Point(293, 188);
+            this.makeTextBox.Location = new System.Drawing.Point(324, 188);
             this.makeTextBox.MaxLength = 50;
             this.makeTextBox.Name = "makeTextBox";
             this.makeTextBox.Size = new System.Drawing.Size(161, 20);
@@ -252,7 +257,7 @@
             // 
             // engineSizeTextBox
             // 
-            this.engineSizeTextBox.Location = new System.Drawing.Point(293, 214);
+            this.engineSizeTextBox.Location = new System.Drawing.Point(324, 214);
             this.engineSizeTextBox.MaxLength = 10;
             this.engineSizeTextBox.Name = "engineSizeTextBox";
             this.engineSizeTextBox.Size = new System.Drawing.Size(161, 20);
@@ -261,37 +266,44 @@
             // 
             // rentalPerDayTextBox
             // 
-            this.rentalPerDayTextBox.Location = new System.Drawing.Point(293, 266);
+            this.rentalPerDayTextBox.Location = new System.Drawing.Point(324, 266);
             this.rentalPerDayTextBox.Name = "rentalPerDayTextBox";
-            this.rentalPerDayTextBox.Size = new System.Drawing.Size(161, 20);
+            this.rentalPerDayTextBox.Size = new System.Drawing.Size(69, 20);
             this.rentalPerDayTextBox.TabIndex = 10;
+            this.rentalPerDayTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.RentalPerDayToolTip.SetToolTip(this.rentalPerDayTextBox, "Enter Rental Cost Per Day");
             this.rentalPerDayTextBox.TextChanged += new System.EventHandler(this.rentalPerDayTextBox_TextChanged);
             // 
             // availableCheckBox
             // 
             this.availableCheckBox.AutoSize = true;
-            this.availableCheckBox.Location = new System.Drawing.Point(293, 300);
+            this.availableCheckBox.Location = new System.Drawing.Point(324, 297);
             this.availableCheckBox.Name = "availableCheckBox";
             this.availableCheckBox.Size = new System.Drawing.Size(15, 14);
             this.availableCheckBox.TabIndex = 12;
+            this.availableToolTip.SetToolTip(this.availableCheckBox, "Tick box if car is available");
             this.availableCheckBox.UseVisualStyleBackColor = true;
             // 
             // pageNumberBox
             // 
+            this.pageNumberBox.Enabled = false;
             this.pageNumberBox.Location = new System.Drawing.Point(247, 409);
             this.pageNumberBox.Name = "pageNumberBox";
             this.pageNumberBox.Size = new System.Drawing.Size(161, 20);
             this.pageNumberBox.TabIndex = 21;
-            this.pageNumberBox.Text = "1 of 222";
+            this.pageNumberBox.Text = "1 of 1";
             this.pageNumberBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.pageNumberBox.TextChanged += new System.EventHandler(this.pageNumberBox_TextChanged);
             // 
             // dateRegisteredTextBox
             // 
-            this.dateRegisteredTextBox.Location = new System.Drawing.Point(295, 240);
+            this.dateRegisteredTextBox.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateRegisteredTextBox.Location = new System.Drawing.Point(324, 240);
             this.dateRegisteredTextBox.Name = "dateRegisteredTextBox";
             this.dateRegisteredTextBox.Size = new System.Drawing.Size(159, 20);
             this.dateRegisteredTextBox.TabIndex = 8;
+            this.DateToolTip.SetToolTip(this.dateRegisteredTextBox, "Choose Car Registed Date");
+            this.dateRegisteredTextBox.ValueChanged += new System.EventHandler(this.dateRegisteredTextBox_ValueChanged);
             // 
             // tableAdapterManager1
             // 
@@ -299,6 +311,10 @@
             this.tableAdapterManager1.Connection = null;
             this.tableAdapterManager1.tblCarTableAdapter = null;
             this.tableAdapterManager1.UpdateOrder = CarsDatabase.HireDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // DateToolTip
+            // 
+            this.DateToolTip.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup_1);
             // 
             // frmCars
             // 
@@ -330,6 +346,8 @@
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.titleLabel);
+            this.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaximizeBox = false;
             this.Name = "frmCars";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Task A Olivia Flynn 14/12/2018";
@@ -370,6 +388,9 @@
         private System.Windows.Forms.ToolTip EngineSizeToolTip;
         private System.Windows.Forms.DateTimePicker dateRegisteredTextBox;
         private CarsDatabase.HireDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
+        private System.Windows.Forms.ToolTip DateToolTip;
+        private System.Windows.Forms.ToolTip RentalPerDayToolTip;
+        private System.Windows.Forms.ToolTip availableToolTip;
     }
 }
 

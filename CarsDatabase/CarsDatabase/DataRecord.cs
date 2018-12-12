@@ -1,4 +1,9 @@
-﻿using System;
+﻿/**
+ * Author:    Olivia Flynn
+ * Created:   14/12/2018
+ *            City & Guilds Task A Class DataRecord
+ **/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

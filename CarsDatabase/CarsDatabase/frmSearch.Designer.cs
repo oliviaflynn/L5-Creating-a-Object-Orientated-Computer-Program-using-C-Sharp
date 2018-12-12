@@ -42,25 +42,30 @@
             this.hireDataSet = new CarsDatabase.HireDataSet();
             this.database1DataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblCarTableAdapter = new CarsDatabase.HireDataSetTableAdapters.tblCarTableAdapter();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tblCarBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.hireDataSet1 = new CarsDatabase.HireDataSet1();
+            this.tblCarBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.tblCarTableAdapter1 = new CarsDatabase.HireDataSet1TableAdapters.tblCarTableAdapter();
+            this.dgView = new System.Windows.Forms.DataGridView();
             this.vehicleRegNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.hireDataSet1 = new CarsDatabase.HireDataSet1();
-            this.tblCarBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.tblCarTableAdapter1 = new CarsDatabase.HireDataSet1TableAdapters.tblCarTableAdapter();
+            this.tblCarBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.hireDataSet2 = new CarsDatabase.HireDataSet2();
+            this.tblCarTableAdapter2 = new CarsDatabase.HireDataSet2TableAdapters.tblCarTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hireDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hireDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblCarBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hireDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -71,9 +76,9 @@
             this.groupBox1.Controls.Add(this.operatorLabel);
             this.groupBox1.Controls.Add(this.cboOperator);
             this.groupBox1.Controls.Add(this.cboField);
-            this.groupBox1.Location = new System.Drawing.Point(105, 41);
+            this.groupBox1.Location = new System.Drawing.Point(50, 41);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(315, 71);
+            this.groupBox1.Size = new System.Drawing.Size(396, 82);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
@@ -81,82 +86,72 @@
             // valueLabel
             // 
             this.valueLabel.AutoSize = true;
-            this.valueLabel.Location = new System.Drawing.Point(187, 15);
+            this.valueLabel.Location = new System.Drawing.Point(234, 15);
             this.valueLabel.Name = "valueLabel";
-            this.valueLabel.Size = new System.Drawing.Size(34, 13);
+            this.valueLabel.Size = new System.Drawing.Size(42, 15);
             this.valueLabel.TabIndex = 4;
             this.valueLabel.Text = "Value";
             // 
             // DataEntryTextBox
             // 
-            this.DataEntryTextBox.Location = new System.Drawing.Point(187, 31);
+            this.DataEntryTextBox.Location = new System.Drawing.Point(237, 36);
             this.DataEntryTextBox.Name = "DataEntryTextBox";
-            this.DataEntryTextBox.Size = new System.Drawing.Size(121, 20);
+            this.DataEntryTextBox.Size = new System.Drawing.Size(140, 23);
             this.DataEntryTextBox.TabIndex = 5;
             // 
             // fieldLabel
             // 
             this.fieldLabel.AutoSize = true;
-            this.fieldLabel.Location = new System.Drawing.Point(6, 14);
+            this.fieldLabel.Location = new System.Drawing.Point(6, 15);
             this.fieldLabel.Name = "fieldLabel";
-            this.fieldLabel.Size = new System.Drawing.Size(29, 13);
+            this.fieldLabel.Size = new System.Drawing.Size(42, 15);
             this.fieldLabel.TabIndex = 0;
             this.fieldLabel.Text = "Field";
             // 
             // operatorLabel
             // 
             this.operatorLabel.AutoSize = true;
-            this.operatorLabel.Location = new System.Drawing.Point(133, 14);
+            this.operatorLabel.Font = new System.Drawing.Font("Consolas", 9F);
+            this.operatorLabel.Location = new System.Drawing.Point(155, 16);
             this.operatorLabel.Name = "operatorLabel";
-            this.operatorLabel.Size = new System.Drawing.Size(48, 13);
+            this.operatorLabel.Size = new System.Drawing.Size(63, 14);
             this.operatorLabel.TabIndex = 2;
             this.operatorLabel.Text = "Operator";
             // 
             // cboOperator
             // 
             this.cboOperator.FormattingEnabled = true;
-            this.cboOperator.Items.AddRange(new object[] {
-            "=",
-            "<",
-            ">",
-            "<=",
-            ">="});
-            this.cboOperator.Location = new System.Drawing.Point(136, 30);
+            this.cboOperator.Location = new System.Drawing.Point(166, 36);
             this.cboOperator.Name = "cboOperator";
-            this.cboOperator.Size = new System.Drawing.Size(45, 21);
+            this.cboOperator.Size = new System.Drawing.Size(52, 23);
             this.cboOperator.TabIndex = 3;
             // 
             // cboField
             // 
             this.cboField.FormattingEnabled = true;
-            this.cboField.Items.AddRange(new object[] {
-            "Make",
-            "EngineSize",
-            "RentalPerDay",
-            "Available"});
-            this.cboField.Location = new System.Drawing.Point(6, 30);
+            this.cboField.Location = new System.Drawing.Point(6, 36);
             this.cboField.Name = "cboField";
-            this.cboField.Size = new System.Drawing.Size(121, 21);
+            this.cboField.Size = new System.Drawing.Size(140, 23);
             this.cboField.TabIndex = 1;
             this.cboField.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // btnRun
             // 
-            this.btnRun.Location = new System.Drawing.Point(512, 32);
+            this.btnRun.Location = new System.Drawing.Point(536, 17);
             this.btnRun.Name = "btnRun";
-            this.btnRun.Size = new System.Drawing.Size(113, 43);
+            this.btnRun.Size = new System.Drawing.Size(132, 50);
             this.btnRun.TabIndex = 7;
-            this.btnRun.Text = "Run";
+            this.btnRun.Text = "&Run";
             this.btnRun.UseVisualStyleBackColor = true;
             this.btnRun.Click += new System.EventHandler(this.runButton_Click);
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(512, 81);
+            this.btnClose.Location = new System.Drawing.Point(536, 73);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(113, 43);
+            this.btnClose.Size = new System.Drawing.Size(132, 50);
             this.btnClose.TabIndex = 8;
-            this.btnClose.Text = "Close";
+            this.btnClose.Text = "&Close";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.closeButton_Click);
             // 
@@ -174,26 +169,40 @@
             // 
             this.tblCarTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridView1
+            // tblCarBindingSource1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tblCarBindingSource1.DataMember = "tblCar";
+            // 
+            // hireDataSet1
+            // 
+            this.hireDataSet1.DataSetName = "HireDataSet1";
+            this.hireDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblCarBindingSource2
+            // 
+            this.tblCarBindingSource2.DataMember = "tblCar";
+            this.tblCarBindingSource2.DataSource = this.hireDataSet1;
+            // 
+            // tblCarTableAdapter1
+            // 
+            this.tblCarTableAdapter1.ClearBeforeFill = true;
+            // 
+            // dgView
+            // 
+            this.dgView.AutoGenerateColumns = false;
+            this.dgView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.vehicleRegNoDataGridViewTextBoxColumn,
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewCheckBoxColumn1});
-            this.dataGridView1.DataSource = this.tblCarBindingSource2;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 141);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(662, 253);
-            this.dataGridView1.TabIndex = 6;
-            // 
-            // tblCarBindingSource1
-            // 
-            this.tblCarBindingSource1.DataMember = "tblCar";
+            this.dgView.DataSource = this.tblCarBindingSource3;
+            this.dgView.Location = new System.Drawing.Point(12, 146);
+            this.dgView.Name = "dgView";
+            this.dgView.Size = new System.Drawing.Size(705, 328);
+            this.dgView.TabIndex = 9;
             // 
             // vehicleRegNoDataGridViewTextBoxColumn
             // 
@@ -231,29 +240,32 @@
             this.dataGridViewCheckBoxColumn1.HeaderText = "Available";
             this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
             // 
-            // hireDataSet1
+            // tblCarBindingSource3
             // 
-            this.hireDataSet1.DataSetName = "HireDataSet1";
-            this.hireDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.tblCarBindingSource3.DataMember = "tblCar";
+            this.tblCarBindingSource3.DataSource = this.hireDataSet2;
             // 
-            // tblCarBindingSource2
+            // hireDataSet2
             // 
-            this.tblCarBindingSource2.DataMember = "tblCar";
-            this.tblCarBindingSource2.DataSource = this.hireDataSet1;
+            this.hireDataSet2.DataSetName = "HireDataSet2";
+            this.hireDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // tblCarTableAdapter1
+            // tblCarTableAdapter2
             // 
-            this.tblCarTableAdapter1.ClearBeforeFill = true;
+            this.tblCarTableAdapter2.ClearBeforeFill = true;
             // 
             // frmSearch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(686, 406);
-            this.Controls.Add(this.dataGridView1);
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.ClientSize = new System.Drawing.Size(729, 486);
+            this.Controls.Add(this.dgView);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnRun);
             this.Controls.Add(this.groupBox1);
+            this.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaximizeBox = false;
             this.Name = "frmSearch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Task A Search Olivia Flynn 14/12/2018";
@@ -263,10 +275,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.tblCarBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hireDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hireDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblCarBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hireDataSet2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -287,7 +301,6 @@
         private CarsDatabase.HireDataSet hireDataSet;
         private System.Windows.Forms.BindingSource tblCarBindingSource;
         private CarsDatabase.HireDataSetTableAdapters.tblCarTableAdapter tblCarTableAdapter;
-        private System.Windows.Forms.DataGridView dataGridView1;
         
         private System.Windows.Forms.BindingSource tblCarBindingSource1;
         
@@ -297,14 +310,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dateRegisteredDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rentalPerDayDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn availableDataGridViewCheckBoxColumn;
+        private HireDataSet1 hireDataSet1;
+        private System.Windows.Forms.BindingSource tblCarBindingSource2;
+        private HireDataSet1TableAdapters.tblCarTableAdapter tblCarTableAdapter1;
+        private System.Windows.Forms.DataGridView dgView;
+        private HireDataSet2 hireDataSet2;
+        private System.Windows.Forms.BindingSource tblCarBindingSource3;
+        private HireDataSet2TableAdapters.tblCarTableAdapter tblCarTableAdapter2;
         private System.Windows.Forms.DataGridViewTextBoxColumn vehicleRegNoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
-        private HireDataSet1 hireDataSet1;
-        private System.Windows.Forms.BindingSource tblCarBindingSource2;
-        private HireDataSet1TableAdapters.tblCarTableAdapter tblCarTableAdapter1;
     }
 }
