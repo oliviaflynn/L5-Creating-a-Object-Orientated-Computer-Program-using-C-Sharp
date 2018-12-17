@@ -303,6 +303,7 @@
             this.dateRegisteredTextBox.Size = new System.Drawing.Size(159, 20);
             this.dateRegisteredTextBox.TabIndex = 8;
             this.DateToolTip.SetToolTip(this.dateRegisteredTextBox, "Choose Car Registed Date");
+            this.dateRegisteredTextBox.Value = new System.DateTime(2018, 12, 14, 14, 42, 0, 0);
             this.dateRegisteredTextBox.ValueChanged += new System.EventHandler(this.dateRegisteredTextBox_ValueChanged);
             // 
             // tableAdapterManager1

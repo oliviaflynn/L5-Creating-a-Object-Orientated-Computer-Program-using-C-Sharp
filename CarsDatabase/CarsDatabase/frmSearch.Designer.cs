@@ -140,7 +140,7 @@
             this.btnRun.Location = new System.Drawing.Point(536, 17);
             this.btnRun.Name = "btnRun";
             this.btnRun.Size = new System.Drawing.Size(132, 50);
-            this.btnRun.TabIndex = 7;
+            this.btnRun.TabIndex = 6;
             this.btnRun.Text = "&Run";
             this.btnRun.UseVisualStyleBackColor = true;
             this.btnRun.Click += new System.EventHandler(this.runButton_Click);
@@ -150,7 +150,7 @@
             this.btnClose.Location = new System.Drawing.Point(536, 73);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(132, 50);
-            this.btnClose.TabIndex = 8;
+            this.btnClose.TabIndex = 7;
             this.btnClose.Text = "&Close";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.closeButton_Click);
@@ -189,6 +189,8 @@
             // 
             // dgView
             // 
+            this.dgView.AllowUserToAddRows = false;
+            this.dgView.AllowUserToDeleteRows = false;
             this.dgView.AutoGenerateColumns = false;
             this.dgView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -201,44 +203,51 @@
             this.dgView.DataSource = this.tblCarBindingSource3;
             this.dgView.Location = new System.Drawing.Point(12, 146);
             this.dgView.Name = "dgView";
+            this.dgView.ReadOnly = true;
             this.dgView.Size = new System.Drawing.Size(705, 328);
-            this.dgView.TabIndex = 9;
+            this.dgView.TabIndex = 8;
             // 
             // vehicleRegNoDataGridViewTextBoxColumn
             // 
             this.vehicleRegNoDataGridViewTextBoxColumn.DataPropertyName = "VehicleRegNo";
             this.vehicleRegNoDataGridViewTextBoxColumn.HeaderText = "VehicleRegNo";
             this.vehicleRegNoDataGridViewTextBoxColumn.Name = "vehicleRegNoDataGridViewTextBoxColumn";
+            this.vehicleRegNoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Make";
             this.dataGridViewTextBoxColumn1.HeaderText = "Make";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "EngineSize";
             this.dataGridViewTextBoxColumn2.HeaderText = "EngineSize";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "DateRegistered";
             this.dataGridViewTextBoxColumn3.HeaderText = "DateRegistered";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "RentalPerDay";
             this.dataGridViewTextBoxColumn4.HeaderText = "RentalPerDay";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // dataGridViewCheckBoxColumn1
             // 
             this.dataGridViewCheckBoxColumn1.DataPropertyName = "Available";
             this.dataGridViewCheckBoxColumn1.HeaderText = "Available";
             this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
             // 
             // tblCarBindingSource3
             // 
